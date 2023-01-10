@@ -32,4 +32,5 @@ data class ShopperWithMultipleResponsability (
    fun calculateTotalWithTax(): Double {
       return calculateBillingTotal() * (1 + TAX )
    }
+
 }
