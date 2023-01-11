@@ -1,5 +1,10 @@
 package com.example.solid.dip
 
+import android.os.Build
+import androidx.annotation.RequiresApi
+import java.time.LocalDate
+
+@RequiresApi(Build.VERSION_CODES.O)
 fun main(){
     val driverPostgres ="host=192.168.2.2; port=5432"
     val driverMysql = "host=192.168.2.3; port=3306"
@@ -12,6 +17,12 @@ fun main(){
     productDao.getProperties().forEach { println(it) }
     productDao.save()
 
-
-
+    val employeeDao= EmployeeDao(id=0,
+        fullName = "Ambrosio Cardoso",
+        dateOfAdmision = LocalDate.now(),
+        area = "DCEA"
+    )
+    println("-------------------------")
+    employeeDao.getProperties().forEach { println(it) }
+    employeeDao.save()
 }
