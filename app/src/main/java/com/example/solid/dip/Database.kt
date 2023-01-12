@@ -1,8 +1,5 @@
 package com.example.solid.dip
 
-import android.provider.ContactsContract.RawContacts.Data
-
-
 class  Database  {
 
    companion object  {

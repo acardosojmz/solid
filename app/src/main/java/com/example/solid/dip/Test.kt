@@ -2,6 +2,10 @@ package com.example.solid.dip
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.runBlocking
 import java.time.LocalDate
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -25,4 +29,8 @@ fun main(){
     println("-------------------------")
     employeeDao.getProperties().forEach { println(it) }
     employeeDao.save()
+
+
+    //-----------
+
 }
