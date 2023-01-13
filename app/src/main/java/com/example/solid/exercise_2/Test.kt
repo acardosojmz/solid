@@ -21,10 +21,10 @@ fun main () {
     )
 
     val group = Group.Builder(id = 1, name = "Super stars")
-        .addMembers(listOf(user, user) as ArrayList<User>)
+        .addMembers( arrayListOf(user, user))
         .build()
 
-   // group.members.forEach { println(it) }
+    group.members.forEach { println(it) }
 
 
     val mathematicalTopics = Topic(
@@ -36,6 +36,12 @@ fun main () {
     )
 
     println(mathematicalTopics)
+    val address= Address(street = "Calle fff",
+        colony = "Fresnos",
+        municipality = "Xoxo",
+        state = "Oax"
+    )
+    println(address)
 
 }
 

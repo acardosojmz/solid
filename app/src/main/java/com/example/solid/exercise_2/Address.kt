@@ -4,5 +4,5 @@ data class Address (
     val street: String,
     val colony: String,
     val municipality: String,
-    val state: String,
+    val state: String="Oaxaca"
     )

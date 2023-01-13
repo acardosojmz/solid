@@ -9,9 +9,10 @@ data class Contract (val user: User,
                      val contractDetails: List<ContractDetail>){
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun isValid(resource: Resource): Boolean{
-        val resourceSearched = contractDetails.firstOrNull { it.resource==resource }
+    fun isValid(resourceOfType: ResourceOfType): Boolean{
+        val resourceSearched = contractDetails.firstOrNull { it.resourceOfType==resourceOfType }
         val currentDate = LocalDate.now()
+
         val finalDate =
                 when(resourceSearched?.membershipType){
                     is MembershipType.Daily -> date.plusDays(1)

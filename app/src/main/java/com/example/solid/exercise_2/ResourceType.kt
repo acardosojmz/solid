@@ -1,8 +1,8 @@
 package com.example.solid.exercise_2
 
-import android.content.SharedPreferences.Editor
+
 import java.time.LocalDate
-import java.time.Period
+
 
 
 sealed class ResourceType: Resource {
